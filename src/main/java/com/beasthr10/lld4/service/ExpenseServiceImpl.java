@@ -1,4 +1,4 @@
-package com.beasthr10.lld4.service.impl;
+package com.beasthr10.lld4.service;
 
 import com.beasthr10.lld4.exception.ExpenseCreationException;
 import com.beasthr10.lld4.models.Expense;
@@ -7,7 +7,7 @@ import com.beasthr10.lld4.models.ExpenseUser;
 import com.beasthr10.lld4.models.User;
 import com.beasthr10.lld4.repo.ExpenseRepo;
 import com.beasthr10.lld4.repo.UserRepository;
-import com.beasthr10.lld4.service.IExpenseService;
+import com.beasthr10.lld4.service.impl.IExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.beasthr10.lld4.service;
+package com.beasthr10.lld4.service.impl;
 
 import com.beasthr10.lld4.exception.ExpenseCreationException;
 import com.beasthr10.lld4.models.Expense;
