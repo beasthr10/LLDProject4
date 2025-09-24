@@ -8,6 +8,6 @@ import java.util.List;
 public class CreateExpenseRequestDTO {
     private String description;
     private List<Long> userIds;
-    private double percentageSplit;
+    private String splitType;
     private double totalAmount;
 }

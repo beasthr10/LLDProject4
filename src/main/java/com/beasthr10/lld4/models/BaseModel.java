@@ -10,7 +10,7 @@ import java.util.Date;
 public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private final Long id;
-    private final Date createdAt;
-    private final Date updatedAt;
+    private  Long id;
+    private  Date createdAt;
+    private  Date lastModifiedAt;
 }

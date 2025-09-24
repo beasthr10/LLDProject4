@@ -8,5 +8,5 @@ import java.util.List;
 
 @Service
 public interface IExpenseService {
-    Expense createExpense(String description, double totalAmount, List<Long> userIds, double percentageSplit) throws ExpenseCreationException;
+    Expense createExpense(String description, double totalAmount, List<Long> userIds, String splitType) throws ExpenseCreationException;
 }

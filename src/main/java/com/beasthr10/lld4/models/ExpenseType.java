@@ -1,4 +1,5 @@
 package com.beasthr10.lld4.models;
 
 public enum ExpenseType {
+    NORMAL, DUMMY
 }

@@ -2,6 +2,7 @@ package com.beasthr10.lld4.controller;
 
 import com.beasthr10.lld4.dto.CreateExpenseRequestDTO;
 import com.beasthr10.lld4.dto.ExpenseResponseDTO;
+import com.beasthr10.lld4.exception.ExpenseCreationException;
 import com.beasthr10.lld4.models.Expense;
 import com.beasthr10.lld4.service.IExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,8 @@ public class ExpenseController {
     }
 
     @PostMapping("/expense")
-    public ResponseEntity<ExpenseResponseDTO> createExpense(@RequestBody CreateExpenseRequestDTO dto){
-       Expense createdExpense = iexpenseService.createExpense(dto.getDescription(), dto.getTotalAmount(), dto.getUserIds(), dto.getPercentageSplit());
+    public ResponseEntity<ExpenseResponseDTO> createExpense(@RequestBody CreateExpenseRequestDTO dto) throws ExpenseCreationException {
+       Expense createdExpense = iexpenseService.createExpense(dto.getDescription(), dto.getTotalAmount(), dto.getUserIds(), dto.getSplitType());
 
        // Map createdExpense to ExpenseResponseDTO
         ExpenseResponseDTO response = new ExpenseResponseDTO();

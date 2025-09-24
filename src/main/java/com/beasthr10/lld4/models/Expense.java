@@ -23,4 +23,5 @@ public class Expense extends BaseModel{
 
     @OneToMany(mappedBy = "expense")
     private  List<ExpenseUser> expenseUsers;
+    private Date createdAt;
 }
